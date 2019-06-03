@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div style="display: block;" class="play11">
+	<h1 style="">ОЧКИ</h1>
+	<h1 class="point" style="">100</h1>
+	<h1 class="slon" style="position: absolute; margin-left: 30%; margin-top: 20%; display: none;">Где двойная рыба?</h1>
+</div>
+
+<div style="display: block;" class="play1">
+	<div class="card1" style="background-image: url(fish.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 60%; margin-top: 28%"></div>
+	<div class="card2" style="background-image: url(Hercules.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 40%; margin-top: 28%"></div>
+	<div class="card3" style="background-image: url(guard.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 20%; margin-top: 28%"></div>
+	<div class="col-4 card4" style="background-image: url(bird.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 0%; margin-top: 28%">
+	</div>
+	<div class="col-4 card5" style="background-image: url(Butterfly.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 80%; margin-top: 2%"></div>
+	<div class="col-4 card6" style="background-image: url(mutant.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 60%; margin-top: 2%"></div>
+	<div class="col-4 card7" style="background-image: url(tarakan.jpg); height: 200px; width: 300px; background-size: 100% 100%;  position: absolute; margin-left: 40%; margin-top: 2%">
+	</div>
+	<div class="col-4 card8" style="background-image: url(gus.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 20%; margin-top: 2%"></div>
+	<div class="col-4 card9" style="background-image: url(cat.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 0%; margin-top: 2%;"></div>
+</div>
+
+<div style="display: none;" class="play22">
+	<h1 style="">ОЧКИ</h1>
+	<h1 class="point1" style="">100</h1>
+	<h1 class="slon1" style="position: absolute; margin-left: 30%; margin-top: 20%; display: none;">Найди Корову!</h1>
+</div>
+
+<div style="display: none;" class="play2">
+	<div class="card11" style="background-image: url(img/Antilop.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 60%; margin-top: 28%"></div>
+	<div class="card22" style="background-image: url(img/begemot.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 40%; margin-top: 28%"></div>
+	<div class="card33" style="background-image: url(img/elephant.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 20%; margin-top: 28%"></div>
+	<div class="col-4 card44" style="background-image: url(img/giena.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 0%; margin-top: 28%">
+	</div>
+	<div class="col-4 card55" style="background-image: url(img/jiraf.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 80%; margin-top: 2%"></div>
+	<div class="col-4 card66" style="background-image: url(img/korova.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 60%; margin-top: 2%"></div>
+	<div class="col-4 card77" style="background-image: url(img/lion.jpg); height: 200px; width: 300px; background-size: 100% 100%;  position: absolute; margin-left: 40%; margin-top: 2%">
+	</div>
+	<div class="col-4 card88" style="background-image: url(img/nosorog.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 20%; margin-top: 2%"></div>
+	<div class="col-4 card99" style="background-image: url(img/zebra.jpg); height: 200px; width: 300px; background-size: 100% 100%; position: absolute; margin-left: 0%; margin-top: 2%;"></div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	let ch = 100;
+
+let timer1 = function() {
+	document.querySelector(".card1").style.background = "black"
+	document.querySelector(".card2").style.background = "black"
+	document.querySelector(".card3").style.background = "black"
+	document.querySelector(".card4").style.background = "black"
+	document.querySelector(".card5").style.background = "black"
+	document.querySelector(".card6").style.background = "black"
+	document.querySelector(".card7").style.background = "black"
+	document.querySelector(".card8").style.background = "black"
+	document.querySelector(".card9").style.background = "black"
+	document.querySelector(".slon").style.display = "block"
+}
+
+	document.querySelector(".card6").onclick = function() {
+		alert("Ты смог!!")
+		document.querySelector(".slon").style.display = "none"
+		ch = ch + 1000
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card6").style.backgroundImage = "url(mutant.jpg)"
+		document.querySelector(".card6").style.backgroundSize = "100% 100%"
+		document.querySelector(".card1").style.backgroundImage = "url(fish.jpg)"
+		document.querySelector(".card1").style.backgroundSize = "100% 100%"
+		document.querySelector(".card2").style.backgroundImage = "url(Hercules.jpg)"
+		document.querySelector(".card2").style.backgroundSize = "100% 100%"
+		document.querySelector(".card3").style.backgroundImage = "url(guard.jpg)"
+		document.querySelector(".card3").style.backgroundSize = "100% 100%"
+		document.querySelector(".card4").style.backgroundImage = "url(bird.jpg)"
+		document.querySelector(".card4").style.backgroundSize = "100% 100%"
+		document.querySelector(".card5").style.backgroundImage = "url(Butterfly.jpg)"
+		document.querySelector(".card5").style.backgroundSize = "100% 100%"
+		document.querySelector(".card7").style.backgroundImage = "url(tarakan.jpg)"
+		document.querySelector(".card7").style.backgroundSize = "100% 100%"
+		document.querySelector(".card8").style.backgroundImage = "url(gus.jpg)"
+		document.querySelector(".card8").style.backgroundSize = "100% 100%"
+		document.querySelector(".card9").style.backgroundImage = "url(cat.jpg)"
+		document.querySelector(".card9").style.backgroundSize = "100% 100%"
+		document.querySelector(".play1").style.display = "none"
+			document.querySelector(".play2").style.display = "block"
+			document.querySelector(".play11").style.display = "none"
+			document.querySelector(".play22").style.display = "block"
+			document.querySelector(".point1").innerHTML = ch;
+	}
+
+	document.querySelector(".card1").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card1").style.backgroundImage = "url(fish.jpg)"
+		document.querySelector(".card1").style.backgroundSize = "100% 100%"
+	}
+	document.querySelector(".card2").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card2").style.backgroundImage = "url(Hercules.jpg)"
+		document.querySelector(".card2").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card3").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card3").style.backgroundImage = "url(guard.jpg)"
+		document.querySelector(".card3").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card4").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card4").style.backgroundImage = "url(bird.jpg)"
+		document.querySelector(".card4").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card5").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card5").style.backgroundImage = "url(Butterfly.jpg)"
+		document.querySelector(".card5").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card7").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card7").style.backgroundImage = "url(mutant.jpg)"
+		document.querySelector(".card7").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card8").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card8").style.backgroundImage = "url(tarakan.jpg)"
+		document.querySelector(".card8").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card9").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point").innerHTML = ch;
+		document.querySelector(".card9").style.backgroundImage = "url(gus.jpg)"
+		document.querySelector(".card9").style.backgroundSize = "100% 100%"
+	}
+
+	let timer2 = function() {
+	document.querySelector(".card11").style.background = "black"
+	document.querySelector(".card22").style.background = "black"
+	document.querySelector(".card33").style.background = "black"
+	document.querySelector(".card44").style.background = "black"
+	document.querySelector(".card55").style.background = "black"
+	document.querySelector(".card66").style.background = "black"
+	document.querySelector(".card77").style.background = "black"
+	document.querySelector(".card88").style.background = "black"
+	document.querySelector(".card99").style.background = "black"
+	document.querySelector(".slon1").style.display = "block"
+}
+
+	document.querySelector(".card66").onclick = function() {
+		alert("Ты смог!!")
+		document.querySelector(".slon1").style.display = "none"
+		ch = ch + 1000
+		document.querySelector(".point1").innerHTML = ch;
+		document.querySelector(".card66").style.backgroundImage = "url(img/korova.jpg)"
+		document.querySelector(".card66").style.backgroundSize = "100% 100%"
+		document.querySelector(".card11").style.backgroundImage = "url(img/Antilop.jpg)"
+		document.querySelector(".card11").style.backgroundSize = "100% 100%"
+		document.querySelector(".card22").style.backgroundImage = "url(img/begemot.jpg)"
+		document.querySelector(".card22").style.backgroundSize = "100% 100%"
+		document.querySelector(".card33").style.backgroundImage = "url(img/elephant.jpg)"
+		document.querySelector(".card33").style.backgroundSize = "100% 100%"
+		document.querySelector(".card44").style.backgroundImage = "url(img/giena.jpg)"
+		document.querySelector(".card44").style.backgroundSize = "100% 100%"
+		document.querySelector(".card55").style.backgroundImage = "url(img/jiraf.jpg)"
+		document.querySelector(".card55").style.backgroundSize = "100% 100%"
+		document.querySelector(".card77").style.backgroundImage = "url(img/lion.jpg)"
+		document.querySelector(".card77").style.backgroundSize = "100% 100%"
+		document.querySelector(".card88").style.backgroundImage = "url(img/nosorog.jpg)"
+		document.querySelector(".card88").style.backgroundSize = "100% 100%"
+		document.querySelector(".card99").style.backgroundImage = "url(img/zebra.jpg)"
+		document.querySelector(".card99").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card11").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch;
+		document.querySelector(".card11").style.backgroundImage = "url(img/Antilop.jpg)"
+		document.querySelector(".card11").style.backgroundSize = "100% 100%"
+	}
+	document.querySelector(".card22").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch1;
+		document.querySelector(".card22").style.backgroundImage = "url(img/begemot.jpg)"
+		document.querySelector(".card22").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card33").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch1;
+		document.querySelector(".card33").style.backgroundImage = "url(img/elephant.jpg)"
+		document.querySelector(".card33").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card44").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch1;
+		document.querySelector(".card44").style.backgroundImage = "url(img/giena.jpg)"
+		document.querySelector(".card44").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card55").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch1;
+		document.querySelector(".card55").style.backgroundImage = "url(img/jiraf.jpg)"
+		document.querySelector(".card55").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card77").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch1;
+		document.querySelector(".card77").style.backgroundImage = "url(img/lion.jpg)"
+		document.querySelector(".card77").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card88").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch1;
+		document.querySelector(".card88").style.backgroundImage = "url(img/nosorog.jpg)"
+		document.querySelector(".card88").style.backgroundSize = "100% 100%"
+	}
+
+	document.querySelector(".card99").onclick = function() {
+		alert("NOPE!!")
+		ch = ch - 10
+		document.querySelector(".point1").innerHTML = ch1;
+		document.querySelector(".card99").style.backgroundImage = "url(img/zebra.jpg)"
+		document.querySelector(".card99").style.backgroundSize = "100% 100%"
+	}
+
+setTimeout(timer2, 10000)
+
+setTimeout(timer1, 3000)
+
+</script>	
+</body>
+</html>
